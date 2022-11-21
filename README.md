@@ -16,12 +16,12 @@ terragrunt version v0.40.2
 Learn by doing in real, live practice environment with ACloudGuru cloud playground.
 
 ### 1. Allow the SDK to communicate with GCP
-```
-$ gcloud auth login --no-launch-browser
+```shell
+gcloud auth login --no-launch-browser
 ```
 
 ### 2. Create the Service Account key
-```
+```shell
 $ gcloud iam service-accounts keys create terraform.json --iam-account <SERVICE_ACCOUNT_EMAIL>
 ```
 
