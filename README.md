@@ -22,28 +22,32 @@ gcloud auth login --no-launch-browser
 
 ### 2. Create the Service Account key
 ```shell
-$ gcloud iam service-accounts keys create terraform.json --iam-account <SERVICE_ACCOUNT_EMAIL>
+gcloud iam service-accounts keys create terraform.json --iam-account <SERVICE_ACCOUNT_EMAIL>
 ```
 
 ### 3. Update project name 'playgroud
+```shell
+vi main.tf
 ```
-$ vi main.tf
-
+```yaml
 provider "google" {
   ...
   project = "playground-x-y-z"
   ...
 }
-
 ```
 
 ### 4. Terraform init; plan; apply; and destroy;
+```shell
+terraform init
 ```
-$ terraform init
 
-$ terraform plan
-$ terraform apply -auto-approve
+```shell
+terraform plan
+terraform apply -auto-approve
+```
 
-$ terraform plan -destroy
-$ terraform destroy -auto-approve
+```shell
+terraform plan -destroy
+terraform destroy -auto-approve
 ```
